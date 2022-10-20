@@ -1,8 +1,9 @@
 package tn.esprit.rh.achat.services;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import lombok.extern.slf4j.Slf4j;
 import tn.esprit.rh.achat.entities.*;
 import tn.esprit.rh.achat.repositories.*;
 
@@ -15,7 +16,8 @@ import java.util.Set;
 @Slf4j
 @Transactional
 public class FactureServiceImpl implements IFactureService {
-
+	 private static final org.slf4j.Logger log = 
+		    org.slf4j.LoggerFactory.getLogger(Facture.class);
 	@Autowired
 	FactureRepository factureRepository;
 	@Autowired
